@@ -37,10 +37,6 @@ public class EmbeddedTomcatEx {
         Connector con = new Connector();
         con.setPort(8443);
         
-        Http11NioProtocol protocol = (Http11NioProtocol) con.getProtocolHandler();
-        protocol.setSSLEnabled(true);
-        protocol.setMaxThreads(150);
-        
         Http2Protocol http2 = new Http2Protocol();
         con.addUpgradeProtocol(http2);
         
