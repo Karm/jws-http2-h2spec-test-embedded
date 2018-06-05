@@ -96,7 +96,7 @@
 
     <!--NIO2 + JSSE-->
     <Connector protocol="org.apache.coyote.http11.Http11Nio2Protocol"
-               sslImplementationName="org.apache.tomcat.util.net.jsse.JSSEImplementation"
+               sslImplementationName="org.apache.tomcat.util.net.jsse.OpenSSLImplementation"
                maxThreads="150" SSLEnabled="true"
                port="8444" >
       <UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" />
